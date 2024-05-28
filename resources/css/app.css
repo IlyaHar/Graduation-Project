@@ -1,0 +1,59 @@
+.main_title {
+    font-size: 70px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.error-mess,
+.success-mess {
+    padding: 15px 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.error-mess {
+    background: #d45858;
+}
+
+.success-mess {
+    background: #6ab05a;
+}
+
+.link_card {
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 173px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer >  .container > .social > i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background: silver;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 600ms ease;
+    color: #333;
+}
+
+footer > .container > .social > i:hover {
+    transition: transform 600ms ease;
+    transform: translateY(-5px);
+}
