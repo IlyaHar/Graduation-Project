@@ -28,6 +28,12 @@ a {
     border-radius: 10px;
 }
 
+.social_icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
 footer {
     margin-top: 173px;
     display: flex;

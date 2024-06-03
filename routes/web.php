@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,14 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/google/callback', [\App\Http\Controllers\AuthController::class, 'loginByGoogle'])->middleware('guest');
+
+Route::get('/github/redirect', function () {
+    return Socialite::driver('github')->redirect();
+})->name('github.redirect');
+
+Route::get('/github/callback', [\App\Http\Controllers\AuthController::class, 'loginByGitHub']);
 
 Route::get('/contacts', [\App\Http\Controllers\ContactsController::class, 'index'])->name('contacts.index');
 Route::post('/contacts', [\App\Http\Controllers\ContactsController::class, 'store'])->name('contacts.store');
